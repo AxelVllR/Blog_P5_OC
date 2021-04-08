@@ -18,8 +18,8 @@ class Form {
             } else {
                 $value = '';
             }
-            $list = $this->listItems($field['attr']);
             if($field['attr']['type'] == 'textarea') {
+                $list = $this->listItems($field['attr']);
                 $form .= '<textarea '. $list . ' style="width: 100%" class="form-control m-2">'. $value . '</textarea>';
                 continue;
             } elseif ($field['attr']['type'] == 'select') {
@@ -28,8 +28,10 @@ class Form {
             } elseif ($field['attr']['type'] == 'file') {
                 $form .= $this->createFile($field['attr'], $value);
                 continue;
+            } else {
+                $list = $this->listItems($field['attr']);
+                $form .= '<input class="form-control m-2" '. $list .' value="'.$value.'">';
             }
-            $form .= '<input class="form-control m-2" '. $list .' value="'.$value.'">';
         }
         $form .= $this->createSubmit($submit);
         $form .= "<form>";
@@ -82,6 +84,7 @@ class Form {
 
     public function listItems($attributes) {
         $attrs = '';
+
         foreach($attributes as $key => $attribute) {
             $attrs .= "$key='$attribute'";
         }

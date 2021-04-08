@@ -68,6 +68,8 @@ class AdminController {
 
     public function postShow() {
         $posts = $this->pRepo->findAllNotDeleted();
+        $error = '';
+        $success = '';
 
         $search = (new Treatment())->getGet("search");
         if(isset($search) && !empty($search)) {
@@ -130,6 +132,10 @@ class AdminController {
 
     public function editPost($postId) {
         $post = $this->pRepo->findOneBy(["id" => $postId]);
+
+        $error = '';
+        $success = '';
+
         if(empty($post)) {
             header('Location: /admin/posts');
             exit;
