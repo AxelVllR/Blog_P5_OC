@@ -44,7 +44,7 @@ Sur la page présentant le détail d’un blog post, il faut afficher les inform
 
 ## Installer le Projet
 
-- Si vous ne disposez pas de mails catcher en local, installez 'MailDev', [cliquez-ici](https://nodejs.org/) pour en savoir plus 
+- Si vous ne disposez pas de mails catcher en local, installez 'MailDev', [cliquez-ici](https://grafikart.fr/tutoriels/maildev-tester-emails-595) pour en savoir plus 
 - Clonez le Repo sur votre machine
 - Rendez-vous dans l'invite de commande, puis dans le dossier du projet, lancez la commande
 ```sh
