@@ -6,19 +6,26 @@ use App\Renderer\Renderer;
 
 class MailerManager {
 
+    private const FILE =  __DIR__ . '/../../config.ini';
+
     /**
      * @var Renderer
      */
     private $renderer;
+    /**
+     * @var array|false
+     */
+    private $settings;
 
     public function __construct()
     {
+        $this->settings = parse_ini_file(self::FILE, TRUE);
         $this->renderer = new Renderer();
     }
 
     public function sendMail($message) {
         // Create the Transport
-        $transport = (new \Swift_SmtpTransport('0.0.0.0', 1025));
+        $transport = (new \Swift_SmtpTransport($this->settings['mails']['smtp_host'], $this->settings['mails']['smtp_port']));
         // Create the Mailer using your created Transport
         $mailer = new \Swift_Mailer($transport);
         // Create a message

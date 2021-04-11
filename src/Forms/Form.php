@@ -13,7 +13,7 @@ class Form {
     public function createField($fields, $method, $url, $values = null, $submit = 'Envoyer') {
         $form = "<form  method='$method' action='$url' enctype='multipart/form-data' class='d-flex flex-column align-items-center justify-content-center'>";
         foreach($fields as $field) {
-            if(!empty($values)) {
+            if(!empty($values) && isset($values[$field['attr']['name']])) {
                 $value = $this->setField($values[$field['attr']['name']]);
             } else {
                 $value = '';
