@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>C:/Users/33659/Desktop/Project/Blog_P5_OC/src</OriginalElement>
+  <nodes>
+    <node x="0.0" y="732.0">\App\Forms\PasswordUpdateForm</node>
+    <node x="1415.0" y="833.0">\App\Controller\BlogController</node>
+    <node x="1326.0" y="732.0">\App\Forms\ForgotForm</node>
+    <node x="978.0" y="450.0">\App\Forms\Form</node>
+    <node x="211.0" y="833.0">\App\Controller\UserController</node>
+    <node x="900.0" y="732.0">\App\Forms\PostForm</node>
+    <node x="722.0" y="833.0">\App\Services\ImageService</node>
+    <node x="269.75" y="0.0">\App\Repository\Connexion</node>
+    <node x="689.0" y="732.0">\App\Forms\LoginForm</node>
+    <node x="992.0" y="833.0">\App\App</node>
+    <node x="186.00000000000003" y="161.0">\App\Repository\CategoryRepository</node>
+    <node x="432.0" y="833.0">\App\Services\MailerManager</node>
+    <node x="200.0" y="1067.0">\App\Controller\ContactController</node>
+    <node x="422.0" y="732.0">\App\Forms\TokenForm</node>
+    <node x="1237.0" y="833.0">\App\Controller\AuthController</node>
+    <node x="1959.0" y="732.0">\App\Forms\CommentForm</node>
+    <node x="589.0" y="106.0">\App\Repository\PostRepository</node>
+    <node x="1158.0" y="732.0">\App\Forms\ContactForm</node>
+    <node x="211.0" y="732.0">\App\Forms\UserForm</node>
+    <node x="1635.0" y="833.0">\App\Globals\Treatment</node>
+    <node x="1537.0" y="732.0">\App\Forms\FiltersForm</node>
+    <node x="373.0" y="139.0">\App\Repository\CommentRepository</node>
+    <node x="0.0" y="139.0">\App\Repository\UserRepository</node>
+    <node x="1748.0" y="732.0">\App\Forms\SignInForm</node>
+    <node x="0.0" y="1067.0">\App\Controller\LandingController</node>
+    <node x="0.0" y="833.0">\App\Controller\Admin\AdminController</node>
+    <node x="1799.0" y="833.0">\App\Globals\Session</node>
+    <node x="1952.0" y="833.0">\App\Renderer\Renderer</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\App\Repository\CategoryRepository" target="\App\Repository\Connexion" relationship="GENERALIZATION">
+      <point x="0.0" y="-94.5" />
+      <point x="269.5" y="81.0" />
+      <point x="370.25" y="81.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="\App\Forms\PostForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="1019.0" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Repository\PostRepository" target="\App\Repository\Connexion" relationship="GENERALIZATION">
+      <point x="0.0" y="-149.5" />
+      <point x="700.0" y="81.0" />
+      <point x="370.25" y="81.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="\App\Forms\LoginForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="784.5" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Forms\CommentForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="2061.0" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Forms\PasswordUpdateForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="95.5" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Forms\SignInForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="1843.5" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Repository\CommentRepository" target="\App\Repository\Connexion" relationship="GENERALIZATION">
+      <point x="0.0" y="-116.5" />
+      <point x="471.0" y="81.0" />
+      <point x="370.25" y="81.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="\App\Forms\TokenForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="545.5" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Repository\UserRepository" target="\App\Repository\Connexion" relationship="GENERALIZATION">
+      <point x="0.0" y="-116.5" />
+      <point x="83.0" y="81.0" />
+      <point x="370.25" y="81.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="\App\Forms\FiltersForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="1632.5" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Forms\UserForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="306.5" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Forms\ContactForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="1232.0" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="\App\Forms\ForgotForm" target="\App\Forms\Form" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="1421.5" y="707.0" />
+      <point x="1125.5" y="707.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.15" showDependencies="false" x="180.82608695652175" y="187.21739130434787" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
