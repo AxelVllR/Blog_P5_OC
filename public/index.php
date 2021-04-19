@@ -7,7 +7,6 @@ $request = $_SERVER['REQUEST_URI'];
 $exp = explode("?", $request);
 //var_dump($request);
 $app = new \App\App;
-var_dump($app);
 
 
 // echo $twig->render('test.html.twig');
