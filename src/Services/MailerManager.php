@@ -56,7 +56,7 @@ class MailerManager {
         $body = $this->renderer->display("mails/sign_in_confirm.html.twig", ['user' => $user]);
 
         $message = (new \Swift_Message('Confirmation d\'inscription AxelVllR Blog !'))
-            ->setFrom(['no-reply@axelvllr.com' => 'AxelVllR Blog'])
+            ->setFrom(['contact@axelvallier.fr' => 'AxelVllR Blog'])
             ->setTo([$user['email']])
             ->setBody($body, 'text/html')
         ;
@@ -69,7 +69,7 @@ class MailerManager {
         $body = $this->renderer->display("mails/contact.html.twig", ['contact' => $values]);
 
         $message = (new \Swift_Message('Nouvelle demande de contact !'))
-            ->setFrom(['no-reply@axelvllr.com' => 'AxelVllR Blog'])
+            ->setFrom(['contact@axelvallier.fr' => 'AxelVllR Blog'])
             ->setTo(['contact@axelvallier.fr'])
             ->setBody($body, 'text/html')
         ;
