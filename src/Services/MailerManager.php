@@ -44,7 +44,7 @@ class MailerManager {
         $body = $this->renderer->display("mails/forgot_password.html.twig", ['user' => $user, 'token' => $token]);
 
         $message = (new \Swift_Message('Réinitialisation du mot de passe'))
-            ->setFrom(['no-reply@axelvllr.com' => 'AxelVllR Blog'])
+            ->setFrom(['contact@axelvallier.fr' => 'Axel Vallier'])
             ->setTo([$user->email])
             ->setBody($body, 'text/html')
         ;
