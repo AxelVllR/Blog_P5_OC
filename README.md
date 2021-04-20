@@ -63,6 +63,8 @@ password =
 [mails]
 smtp_host = 0.0.0.0
 smtp_port = 1025
+username =
+password =
 
 [app]
 url = http://localhost:8000 (A ne modifier que si vous souhaitez lancer votre serveur local sur un autre port que 8000!)
