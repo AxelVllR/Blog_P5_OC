@@ -63,11 +63,14 @@ password =
 [mails]
 smtp_host = 0.0.0.0
 smtp_port = 1025
+
+[app]
+url = http://localhost:8000 (A ne modifier que si vous souhaitez lancer votre serveur local sur un autre port que 8000!)
 ```
 - Encore une fois dans la racine du projet, vous disposez d'un fichier 'blog.sql', il vous suffit de créer une Base de données 'blog' sur votre phpmyadmin, puis d'importer ce fichier dans celle-ci
 - après tout ces efforts, il ne vous restes plus qu'à lancer la commande suivante :
 ```
-php -S localhost:8001 -t public/
+php -S localhost:8000 -t public/
 ```
 - ENJOY !
  

@@ -2,3 +2,4 @@
 .idea
 error.log
 .htaccess
+public/PostsImages/*
