@@ -46,11 +46,11 @@
         </div>
     </div>
 </footer>
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/popper.js/umd/popper.min.js"> </script>
-<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="/vendor/jquery.cookie/jquery.cookie.js"> </script>
-<script src="/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
-<script src="/js/front.js"></script>
+<script src="{% if app_url is defined %}{{ app_url }}{% endif %}/vendor/jquery/jquery.min.js"></script>
+<script src="{% if app_url is defined %}{{ app_url }}{% endif %}/vendor/popper.js/umd/popper.min.js"> </script>
+<script src="{% if app_url is defined %}{{ app_url }}{% endif %}/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="{% if app_url is defined %}{{ app_url }}{% endif %}/vendor/jquery.cookie/jquery.cookie.js"> </script>
+<script src="{% if app_url is defined %}{{ app_url }}{% endif %}/vendor/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+<script src="{% if app_url is defined %}{{ app_url }}{% endif %}/js/front.js"></script>
 </body>
 </html>

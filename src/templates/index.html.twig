@@ -7,7 +7,7 @@
             <h1>Bienvenue sur mon Blog !</h1>
               <div class="d-flex justify-content-center align-items-center">
                   <div>
-                      <a href="/BlogFiles/CV.pdf" download="cv_axel_vallier.pdf" class="m-2 btn btn-dark">Mon CV</a>
+                      <a href="{% if app_url is defined %}{{ app_url }}{% endif %}/BlogFiles/CV.pdf" download="cv_axel_vallier.pdf" class="m-2 btn btn-dark">Mon CV</a>
                   </div>
                   <div>
                       <a href="https://github.com/AxelVllR" target="_blank" class="m-2" style="font-size: 2em;"><i class="fab fa-github-alt"></i></a>

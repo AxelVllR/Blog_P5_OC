@@ -16,6 +16,8 @@ class Renderer {
      */
     private $twig;
 
+    private const FILE =  __DIR__ . '/../../config.ini';
+
     public function __construct() {
         $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/../../src/templates');
         $this->twig = new Environment($loader);
@@ -25,10 +27,15 @@ class Renderer {
     {
         try {
             $session = (new Session())->getAll();
+            $settings = parse_ini_file(self::FILE, TRUE);
             $values['session'] = $session;
+            if($settings['app']['url']) {
+                $values['app_url'] = $settings['app']['url'];
+            }
             $this->twig->addExtension(new StringExtension());
             return $this->twig->render($template, $values);
         } catch (Exception | LoaderError | RuntimeError | SyntaxError $e) {
+            var_dump($e);
             return $this->twig->render('404.html.twig');
         }
     }

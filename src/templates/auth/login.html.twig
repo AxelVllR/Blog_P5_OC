@@ -10,7 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <script src="https://kit.fontawesome.com/e144745512.js" crossorigin="anonymous"></script>
-    <link href="http://axelvallier.fr/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% if app_url is defined %}{{ app_url }}{% endif %}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
