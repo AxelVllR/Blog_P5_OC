@@ -25,7 +25,7 @@ class MailerManager {
 
     public function sendMail($message) {
         // Create the Transport
-        $transport = (new \Swift_SmtpTransport($this->settings['mails']['smtp_host'], $this->settings['mails']['smtp_port']));
+        $transport = (new \Swift_SmtpTransport($this->settings['mails']['smtp_host'], $this->settings['mails']['smtp_port'], 'ssl'));
         if($this->settings['mails']['username'] && $this->settings['mails']['password']) {
             $transport
                 ->setUsername($this->settings['mails']['username'])
