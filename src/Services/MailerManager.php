@@ -70,7 +70,7 @@ class MailerManager {
 
         $message = (new \Swift_Message('Nouvelle demande de contact !'))
             ->setFrom(['no-reply@axelvllr.com' => 'AxelVllR Blog'])
-            ->setTo(['name@domain.org'])
+            ->setTo(['contact@axelvallier.fr'])
             ->setBody($body, 'text/html')
         ;
 
