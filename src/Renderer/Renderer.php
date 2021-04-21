@@ -35,7 +35,6 @@ class Renderer {
             $this->twig->addExtension(new StringExtension());
             return $this->twig->render($template, $values);
         } catch (Exception | LoaderError | RuntimeError | SyntaxError $e) {
-            var_dump($e);
             return $this->twig->render('404.html.twig');
         }
     }

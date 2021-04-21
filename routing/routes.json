@@ -44,6 +44,7 @@
     "method": "show",
     "role":"ROLE_ADMIN",
     "sub_routes": {
+      "token": true,
       "name": "/{id}-{bool}",
       "regex": "\\d+(-)\\d+",
       "method": "treatComment"
@@ -53,6 +54,7 @@
     "class": "\\App\\Controller\\Admin\\AdminController",
     "method": "show",
     "role":"ROLE_ADMIN",
+    "token": true,
     "sub_routes": {
       "name": "/{id}",
       "regex": "\\d+",
@@ -84,6 +86,7 @@
     "method": "show",
     "role":"ROLE_ADMIN",
     "sub_routes": {
+      "token": true,
       "name": "/{roleOrDelete}-{id}",
       "regex": "\\w+-\\d+",
       "method": "changeUserRole"

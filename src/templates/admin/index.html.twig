@@ -114,10 +114,10 @@
                       </td>
                       <td>{{ comment.created_at|date('d-m-Y') }}</td>
                       <td class="d-flex justify-content-center align-items-center">
-                        <a class="btn btn-success btn-sm mr-2" href="/comment/{{ comment.id }}-1">
+                        <a class="btn btn-success btn-sm mr-2" href="/comment/{{ comment.id }}-1?token={{ session.token }}">
                           <i class="fas fa-check"></i>
                         </a>
-                        <a class="btn btn-danger btn-sm" href="/comment/{{ comment.id }}-0">
+                        <a class="btn btn-danger btn-sm" href="/comment/{{ comment.id }}-0?token={{ session.token }}">
                           <i class="fas fa-times"></i>
                         </a>
                       </td>
@@ -167,17 +167,17 @@
                     <td class="d-flex justify-content-start align-items-center">
                       {% if session.id != user.id %}
                         {% if user.role == 'ROLE_USER' %}
-                          <a class="btn btn-danger btn-sm mr-2 d-flex justify-content-center align-items-center" href="/users/role_admin-{{ user.id }}">
+                          <a class="btn btn-danger btn-sm mr-2 d-flex justify-content-center align-items-center" href="/users/role_admin-{{ user.id }}?token={{ session.token }}">
                             <i class="fas fa-user mr-2"></i>
                             <span>Passer Admin</span>
                           </a>
                         {% elseif user.role == 'ROLE_ADMIN' %}
-                          <a class="btn btn-info btn-sm mr-2 d-flex justify-content-center align-items-center" href="/users/role_user-{{ user.id }}">
+                          <a class="btn btn-info btn-sm mr-2 d-flex justify-content-center align-items-center" href="/users/role_user-{{ user.id }}?token={{ session.token }}">
                             <i class="fas fa-user-shield mr-2"></i>
                             <span>Passer Utilisateur</span>
                           </a>
                         {% endif %}
-                        <a class="btn btn-danger btn-sm" href="/users/delete-{{ user.id }}">
+                        <a class="btn btn-danger btn-sm" href="/users/delete-{{ user.id }}?token={{ session.token }}">
                           <i class="fas fa-trash-alt"></i>
                         </a>
                       {% else %}

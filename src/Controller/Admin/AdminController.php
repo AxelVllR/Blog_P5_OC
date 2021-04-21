@@ -62,7 +62,8 @@ class AdminController {
             'comments' => $comments,
             'posts' => $posts,
             'postsViews' => $postsViews,
-            'users' => $users
+            'users' => $users,
+            "page" => "dashboard"
         ]);
     }
 
@@ -107,7 +108,8 @@ class AdminController {
             'posts' => array_reverse($posts),
             'form' => $addPostForm,
             'error' => $error,
-            'success' => $success
+            'success' => $success,
+            "page" => "posts"
         ]);
     }
 
@@ -177,7 +179,8 @@ class AdminController {
         echo $this->renderer->display("admin/post_edit.html.twig", [
             'form' => $addPostForm,
             'error' => $error,
-            'success' => $success
+            'success' => $success,
+            "page" => "posts"
         ]);
     }
 

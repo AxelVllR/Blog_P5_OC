@@ -74,7 +74,7 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
-                        <a href="/admin" class="nav-link active">
+                        <a href="/admin" class="nav-link {% if page is defined and page == 'dashboard' %}active{% endif %}">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Tableau de bord
@@ -82,7 +82,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/admin/posts" class="nav-link">
+                        <a href="/admin/posts" class="nav-link {% if page is defined and page == 'posts' %}active{% endif %}">
                             <i class="nav-icon fas fa-paste"></i>
                             <p>
                                 Articles

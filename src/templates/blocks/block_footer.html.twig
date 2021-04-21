@@ -22,7 +22,7 @@
             <div class="col-md-4">
                 <div class="menus d-flex">
                     <ul class="list-unstyled">
-                        <li> <a href="#">Mon Compte</a></li>
+                        <li> <a href="{{ app_url }}/profile">Mon Compte</a></li>
                         {% if session.role == 'ROLE_ADMIN' %}
                         <li> <a href="/admin">Administration</a></li>
                         {% endif %}
@@ -30,7 +30,7 @@
                     </ul>
                     <ul class="list-unstyled">
                         <li> <a href="#">FAQ</a></li>
-                        <li> <a href="#">Contact</a></li>
+                        <li> <a href="{{ app_url }}/contact">Contact</a></li>
                     </ul>
                 </div>
             </div>

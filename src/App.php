@@ -20,6 +20,22 @@ class App {
             unset($exp[0]);
         }
 
+        $mainRequest = "/" . $exp[array_key_first($exp)];
+        $session = (new Session())->getAll();
+        $tokenSent = (new Globals\Treatment())->getGet('token');
+
+        if(isset($this->routes[$mainRequest]['token'])) {
+            if(empty($tokenSent) || empty($session) || empty($session['token'])) {
+                header("Location: /");
+                exit;
+            }
+
+            if($tokenSent !== $session['token']) {
+                header("Location: /");
+                exit;
+            }
+        }
+
         if(count($exp) > 1) {
            $this->getMultiRoute($exp, $request);
         } else {
@@ -36,6 +52,20 @@ class App {
 
         } elseif(array_key_exists($main, $this->routes)) {
             if(isset($this->routes[$main]['sub_routes'])) {
+                $tokenSent = (new Globals\Treatment())->getGet('token');
+
+                if(isset($this->routes[$main]['sub_routes']['token'])) {
+                    if(empty($tokenSent) || empty($session) || empty($session['token'])) {
+                        header("Location: /");
+                        exit;
+                    }
+
+                    if($tokenSent !== $session['token']) {
+                        header("Location: /");
+                        exit;
+                    }
+                }
+
                 $need = $this->routes[$main]['class'];
                 $sub = $this->routes[$main]['sub_routes'];
                 if(isset($sub['regex'])) {
@@ -74,6 +104,7 @@ class App {
     public function getRoute($request) {
         $renderer = new Renderer\Renderer();
         $session = (new Session())->getAll();
+
         if(array_key_exists($request, $this->routes)) {
             if(isset($this->routes[$request]['session'])) {
                 if(!$this->routes[$request]['session'] && !empty($session['id'])) {

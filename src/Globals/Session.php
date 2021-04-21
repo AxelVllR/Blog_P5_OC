@@ -1,7 +1,6 @@
 <?php
 namespace App\Globals;
 
-use JetBrains\PhpStorm\Pure;
 
 class Session {
 
