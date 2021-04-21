@@ -87,3 +87,7 @@ Mot de passe :
 > admin 
 
 Si vous souhaitez un compte utilisateur également, vous n'avez qu'à le créer via la page d'inscription :)
+
+Voir en ligne 
+
+> [cliquez-ici](http://blog.axelvallier.fr)
